@@ -19,5 +19,33 @@
     "tipo": "n",
     "simple": "Es una secuencia de operaciones que resuelven una conjunto de problemas y que involucran el procesamiento de datos, el calculo de operaciones matemáticas, o la predicción de resultados basados en evidencia.",
     "detalle": "Un algoritmo puede ser definido en un lenguaje de programacion y expresado como una función con datos de entrada y de salida."
+  },
+  {
+    "concepto": "Artificial Intelligence (AI)\n",
+    "traduccion": "Inteligencia Artificial",
+    "tipo": "n",
+    "simple": "Es la capacidad de las maquinas de demostrar inteligencia o imitar capacidades cognitivas propias de seres inteligentes. Estas capacidades incluyen razonar, representar conocimiento, aprender en base a evidencias, planear en base a objetivos, tener curiosidad, y entender el lenguaje natural.",
+    "detalle": "La implementación de inteligencia artificial se basa en métodos de optimización matemática, inferencia estadística, y abstraccion computacional.Actualmente la Inteligencia Artificial (IA) recibe influencia de diversos campos incluyendo linguística, biología, psicología, economía, y muchos otros."
+  },
+  {
+    "concepto": "Attributes",
+    "traduccion": "Características",
+    "tipo": "n",
+    "simple": "Representan las propiedades de un objeto.",
+    "detalle": "Cuando son observables, se pueden medir de forma automatica con sensores (e.g., los pixeles de un objeto, el espectro de frecuencias de un audio, o las palabras de un tweet) o de forma manual(e.g., el nombre de una persona o el tipo de musica de una cancion). Cuando no son observables, se les denomina latentes y se les representa como un vector numérico en cierto espacio matemático llamado embedding (e.g. la salida de una capa en una red neuronal)."
+  },
+  {
+    "concepto": "Back Propagation ",
+    "traduccion": "Retropropagacion",
+    "tipo": "n",
+    "simple": "Es una técnica de optimización matemática que se utiliza para entrenar una red neuronal.",
+    "detalle": "Este algoritmo empieza por calcular el error en la capa de salida de la red y luego propaga esta información hacia las capas anteriores utilizando la regla de la cadena sobre cada capa (ref. Chain Rule).La técnica Gradient Descend (ref. Gradient Descend) utiliza back propagation para actualizar los pesos de una red neuronal con un vector llamado gradiente, el cual comunmente corresponde a la primera derivada de la funcion de costo con respecto a sus pesos. El valor y direccion de la gradiente guía la optimización de los pesos hacia el valor máximo de la funcion de costo. Debido a que back propagation tiene como objetivo reducir la nocion de error (loss function) en el sistema, los pesos se actualizan con el valor negativo de la gradiente."
+  },
+  {
+    "concepto": "Bias",
+    "traduccion": "Prejuicio",
+    "tipo": "n",
+    "simple": "Un algoritmo de aprendizaje supervisado muestra un alto bias cuando predice incorrectamente, y de forma frecuente, resultados incorrectos para cierta clase de observaciones.",
+    "detalle": "Un algoritmo con poca capacidad (ref. Capacity) puede llegar a ser poco flexible al solo aprender un pequeno número de interacciones en los datos, mostrando así un alto bias y un menor variance. Por el contrario, un algoritmo con alta capacidad puede llegar a ser demasiado flexible, al aprender interacciones complejas en distintas regiones del espacio de datos de entrenamiento, comportandose de forma distinta con diferentes datasets de entrenamiento y mostrando un bajo bias, pero con un alto variance."
   }
 ]
