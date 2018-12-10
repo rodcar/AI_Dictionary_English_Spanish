@@ -47,5 +47,341 @@
     "tipo": "n",
     "simple": "Un algoritmo de aprendizaje supervisado muestra un alto bias cuando predice incorrectamente, y de forma frecuente, resultados incorrectos para cierta clase de observaciones.",
     "detalle": "Un algoritmo con poca capacidad (ref. Capacity) puede llegar a ser poco flexible al solo aprender un pequeno número de interacciones en los datos, mostrando así un alto bias y un menor variance. Por el contrario, un algoritmo con alta capacidad puede llegar a ser demasiado flexible, al aprender interacciones complejas en distintas regiones del espacio de datos de entrenamiento, comportandose de forma distinta con diferentes datasets de entrenamiento y mostrando un bajo bias, pero con un alto variance."
+  },
+  {
+    "concepto": "Capacity",
+    "traduccion": "Capacidad",
+    "tipo": "n",
+    "simple": "Es un valor numérico que mide la complejidad de un modelo para reconocer la presencia de distintas clases en los datos.",
+    "detalle": "Dicha complejidad obedece a las interacciones entre las variables de entrada, latentes, y de salida que componen un modelo. Mientras más grande sea la capacidad, el modelo puede aproximar funciones más complejas y no-lineales. En redes neuronales, la capacidad es comúnmente proporcional al número de pesos que exhibe su arquitectura y los cuales representan los parámetros entrenables del modelo. Una medida más teórica de la capacidad es el VC dimension (ref. VC Dimension), la cual mide el número máximo de observaciones que un clasificador puede asignarles etiquetas de forma correcta."
+  },
+  {
+    "concepto": "Convergence",
+    "traduccion": "Convergencia",
+    "tipo": "n",
+    "simple": "Es un estado de estabilidad dentro del proceso de entrenamiento de un modelo de aprendizaje automático.",
+    "detalle": "Podemos observar convergencia cuando la diferencia entre los valores sucesivos de la función de costo es casi constante, el ciclo de entrenamiento alcanza un máximo número de pasos, o las funciones de costo de los datos de entrenamiento y validación dejan de disminuir de forma conjunta. Muchas veces seguir entrando a partir del punto de convergencia conduce al modelo a aprender el ruido presente en los datos de entrenamiento y generar overfiting."
+  },
+  {
+    "concepto": "Convolution",
+    "traduccion": "Convolucion",
+    "tipo": "n",
+    "simple": "Es una operación matemática entre dos señales f y g que expresa la transformación de f cuando se le desplaza por encima g.",
+    "detalle": "Por ejemplo, imagine los pixeles de un imagen f que contiene el rostro de una persona y un conjunto de pesos g de una red neuronal que multiplica partes consecutivas de la imagen con el objetivo de calcular similaridades en toda la señal. El resultado es la convolucin (f * g) y consiste en una secuencia de valores que expresan que partes del rostro reaccionan más a la señal g, resaltando en este proceso esquinas, bordes, texturas, y otras características (ref. Feature Vector). Note que la convolución anterior recibe datos de entrada en dos dimensiones en la función f, mas es muy frecuente usar también señales unidimensionales, como por ejemplo en el análisis de series de tiempo. Si los datos son discretos, es posible acelerar el calculo de la convolución mediante el computo del Fast Fourier Transform (FFT) para cada señal f y g independientemente, luego se multiplica ambas transformaciones elemento por elemento, y finalmente se calcula la inversa del FFT de este producto."
+  },
+  {
+    "concepto": "Convolutional Neural Network (CNN)",
+    "traduccion": "Red Neuronal Convolucional",
+    "tipo": "n",
+    "simple": "Un tipo de red neuronal profunda que utiliza operaciones de convolución (ref. Convolution) a través de una jerarquía de capas sobre los datos de entrada para imitar el efecto de los campos receptivos en la visión humana. Dicha transformación aprende una representación de los datos en cada capa generando características más complejas mientras más profunda sea la arquitectura de la red neuronal.",
+    "detalle": "Este modelo ha sido inspirado por el trabajo de Hubel y Wiesel en procesamiento de información en el cortex visual, en donde se manifiesta los beneficios de explotar las correlaciones espaciales en imágenes. Esto añade robustez a las transformaciones tales como cambios de orientación y escala."
+  },
+  {
+    "concepto": "Dataset",
+    "traduccion": "Dataset",
+    "tipo": "n",
+    "simple": "Es una colección de datos u observaciones relacionadas a un problema determinado.",
+    "detalle": "Ejemplos conocidos incluyen una colección de imágenes que contienen objetos frecuentes (ImageNet dataset), las noticias de una agencia internacional (Reuters- 21578 dataset), una lista de canciones (1 Milion Songs dataset), o las preferencias de varios usuarios sobre determinadas películas (Netflix dataset). El dataset más conocido en algoritmos de aprendizaje profundo (ref. Deep Learning) es ImageNet y consiste de más de un millón de observaciones, categorizadas en 1000 tipos de objetos. Cuando el dataset se almacena en una matriz, las columnas representan los diferentes atributos de un problema (ref. Feature) y las filas representan los vectores de atributos u observaciones de distintas instancias del problema (ref. Feature Vector). Para datos textuales, al dataset también se le denomina corpus."
+  },
+  {
+    "concepto": "Deep Neural Networks",
+    "traduccion": "Redes Neuronales Profundas",
+    "tipo": "n",
+    "simple": "Son redes neuronales que contiene más de una capa escondida, lo cual incrementa la capacidad del modelo para aproximar funciones más complejas (Ref. Capacity).",
+    "detalle": "El éxito actual de las redes neuronales profundas radica en aplicar optimización basada en gradientes (Ref. Gradients) a modelos profundos que tienen una gran capacidad para identificar distintas interacciones en los datos de entrada (patrones). De esta manera, la arquitectura del modelo es proporcional a su desempeño, si se le alimenta con una gran cantidad de información y muestra una capacidad adecuada."
+  },
+  {
+    "concepto": "Deep Learning",
+    "traduccion": "Aprendizaje Profundo",
+    "tipo": "v",
+    "simple": "Es una técnica de aprendizaje automático basado en redes neuronales profundas (ref. Deep Neural Networks) que tiene la propiedad de aprender características o features durante su proceso de entrenamiento. Esto la diferencia de otras técnicas de aprendizaje automático que requieren una selección de características manual o automatizada por propiedades estadísticas.",
+    "detalle": "La clasificación realizada por un algoritmo de deep learning muestra un mejor rendimiento debido a que encuentra de forma iterativa el espacio matemático en donde la función de perdida (ref. Loss Function) se minimiza. La capacidad del algoritmo para recordar patrones se relaciona directamente con su arquitectura. Por ejemplo, patrones espaciales como texturas en imágenes pueden ser aprendidos por una red neuronal profunda llamada Convolutional Neural Network (CNN), patrones temporales que muestran dependencias estadísticas en los datos de entrada como la voz humana o las palabras en un tweet suelen ser aprendidas con una red neuronal llamada Short-Term Memory (LSTM), y reconstrucciones de los datos de entrada con el fin de comprimir la información o segmentarla se representan con Variational Auto Encoders (VAE)."
+  },
+  {
+    "concepto": "Entropy",
+    "traduccion": "Entropia",
+    "tipo": "n",
+    "simple": "Es una medida de información que indica el grado de desorden en un conjunto o la cantidad de ruido en una señal. En teoría de la informaciÂón, la entropía se mide en bits y representa el porcentaje de información generado por un proceso estocástico (refer. Stochastic).",
+    "detalle": "La entropía se define matemáticamente como el valor esperado del logaritmo negativo de los elementos de una distribución discreta. Interesantemente, la entropía utiliza el logaritmo negativo para cuantificar la mayor cantidad de información presente en eventos menos probables y la multiplica por la probabilidad de su ocurrencia calculando así su valor esperado (ref. Expected Value). El concepto de entropía en la información fue introducido por Claude Shannon en su trabajo titulado \"A Mathematical Theory of Communication\" en 1948."
+  },
+  {
+    "concepto": "Expected Value",
+    "traduccion": "Valor Esperado",
+    "tipo": "n",
+    "simple": "Es el valor predicho de una variable y corresponde a la suma del valor de cada observación multiplicada por la probabilidad de su ocurrencia.",
+    "detalle": "Matemáticamente, si x representa el valor de la variable X y p(x) es su probabilidad de ocurrencia, el valor esperado de X se define como,  La regla de los números largos (law of large numbers) establece que el promedio de los valores de una variable casi seguramente converge a su valor esperado si el número de repeticiones es casi infinito. Cuando un algoritmo de aprendizaje automático produce predicciones cuyo valor esperado es igual al valor real de la variable, se dice que no muestra bias y es por lo tanto un unbiased estimator."
+  },
+  {
+    "concepto": "Feature",
+    "traduccion": "Característica",
+    "tipo": "n",
+    "simple": "Es el valor de una propiedad particular asociada a un fenómeno, el cual puede ser observable o escondido (latente).",
+    "detalle": "Ejemplos de características observables incluyen los pixeles de una imagen, las frecuencias de un audio, las palabras de un texto, o incluso las conexiones en una red social. Una característica latente es el valor de salida (activación) de una neurona dentro de una capa. Al proceso de escoger o crear características que sean estadísticamente informativas, no muestren redundancia, y discriminen correctamente se le denomina feature engineering (ingeniería de características) y es muy importante para obtener modelos de regresión, clasificación, y clustering que funcionen de forma más exacta y sean robusta al ruido. La salida de un modelo también se le puede usar como una característica y se le denomina meta-data."
+  },
+  {
+    "concepto": "Feature Vector",
+    "traduccion": "Vector de Características",
+    "tipo": "n",
+    "simple": "Es el conjunto de distintas características (ref. Feature) asociadas al mismo fenómeno. ",
+    "detalle": "El número de dimensiones de este vector representa la cantidad de características que describen el estado de cierto fenómeno. La dimensionalidad o número de características de este vector no debería ser muy largo, debido al llamado curse of dimensionality (maldición de la alta dimensionalidad), la cual representa la dificultad en separar vectores de alta dimensionalidad en distintas clases. Por otro lado, el número de vectores de características indica el tamaño del dataset con el que podemos entrenar y validar un modelo. Los algoritmos de inteligencia artificial usualmente requieren de un vector de características para facilitar el proceso numérico de encontrar patrones en los datos. A menudo un vector de características puede contener valores faltantes (ref. Missing Values), lo cual suele indicar que no todas las características son observables al mismo tiempo."
+  },
+  {
+    "concepto": "Generalization",
+    "traduccion": "Generalización",
+    "tipo": "n",
+    "simple": "Es la propiedad de los seres humanos y animales de utilizar aprendizaje pasado para responder a situaciones presentes, si el contexto y los estímulos son similares.",
+    "detalle": "El cerebro realiza constantemente generalización cuando extrae las propiedades comunes de múltiples observaciones y las abstrae en un concepto más general. Así, los pixeles de una imagen que corresponde a un gato pueden generalizarse bajo el concepto de un animal, a pesar de que otras instancias del mismo concepto luzcan muy diferentes, por ejemplo un perro. En el aprendizaje automático, se utiliza el termino inferencia (ref. Inference) para referirse a esta propiedad."
+  },
+  {
+    "concepto": "Gradient",
+    "traduccion": "Gradiente",
+    "tipo": "n",
+    "simple": "La gradiente de una función es un vector que apunta en la dirección donde su función se maximiza.",
+    "detalle": "A la magnitud de la gradiente se le conoce como pendiente.  Matemáticamente, a la gradiente de la función diferenciable f en el punto x0 se le denota como rf(x0) y representa la tangente de la función en ese punto, es decir es la mejor aproximación lineal a f en x0. Tal aproximación se le calcula como"
+  },
+  {
+    "concepto": "Gradient Ascend",
+    "traduccion": "Valor Esperado",
+    "tipo": "n",
+    "simple": "Es una técnica de optimización matemática que actualiza sucesivamente las variable entrenables de un modelo en la dirección de la gradiente de una función objetivo con el objetivo de encontrar el máximo de tal función.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Gradient Descend",
+    "traduccion": "Valor Esperado",
+    "tipo": "n",
+    "simple": "Es una técnica de optimización matemática que itera en la dirección opuesta a la gradiente para encontrar mínimos locales de una función de costo.",
+    "detalle": "La actualización de los pesos de una red neuronal  usando -gradient descent tiene la siguiente forma:  donde la función L() es una medida de error de predicciÂón asociada a la red neuronal (ref. Loss function) y  es la velocidad de aprendizaje (ref. Learning rate)."
+  },
+  {
+    "concepto": "Hidden Layer",
+    "traduccion": "Capa Escondida",
+    "tipo": "v",
+    "simple": "Una capa de neuronas dentro de la arquitectura de una red neuronal que no está expuesta a los datos de entrada ni a los datos de salida.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Hill Climbing",
+    "traduccion": "Hill Climbing",
+    "tipo": "n",
+    "simple": "Es un algoritmo de optimización que estima los valores de los parámetros entrenables de un modelo, por ejemplo los pesos de una red neuronal.",
+    "detalle": "Hill Climbing añade sucesivamente una pequeña cantidad de ruido con el fin de proponer un modelo que de un mejor rendimiento y optimice una función objetivo. Si tal cambio produce una mejor solución, otro cambio incremental se produce encima de la nueva solución hasta que no se encuentren mejoras sucesivas."
+  },
+  {
+    "concepto": "Hyper-Parameter",
+    "traduccion": "Híper-Parámetro",
+    "tipo": "n",
+    "simple": "Son los parámetros externos a un modelo de aprendizaje automático cuyos valores no se calculan mediante un proceso de optimización matemática sino a través de una búsqueda manual o heurística.",
+    "detalle": "Ejemplos de híper-parámetros incluyen el número de capas escondidas, la velocidad de aprendizaje, y el rango de los valores de inicialización de los pesos de una red neuronal. Usualmente se ajusta los híper-parámetros calculando los valores que resultan en una rendimiento óptimo del modelo en un subconjunto del dataset llamado dataset de validación."
+  },
+  {
+    "concepto": "Inference",
+    "traduccion": "Inferencia",
+    "tipo": "n",
+    "simple": "Es el proceso de obtener hipótesis en base a evidencia o conclusiones lógicas.",
+    "detalle": "En redes neuronales, este paso corresponde a la predicción realizada por un modelo entrenado para saber a que clase le pertenece una observación en los datasets de testing o validación. Los tipos de inferencia incluyen: deducción, inducción, y abducción."
+  },
+  {
+    "concepto": "Kernel",
+    "traduccion": "Kernel",
+    "tipo": "n",
+    "simple": "Es una función que pondera los datos de entrada de una señal durante la operación de convolución (ref. Convolution).",
+    "detalle": "Estadísticamente, es un función de densidad probabilística que normaliza los valores de una variable."
+  },
+  {
+    "concepto": "Label",
+    "traduccion": "Etiqueta",
+    "tipo": "v",
+    "simple": "Es el valor real asignado a una observación en un dataset (ref. dataset). ",
+    "detalle": "A menudo cada observación posee una etiqueta la cual ha sido otorgada por una persona después de observar sus características (ref. Feature). Por ejemplo, a los pixeles de una imágenes se les puede otorgar una etiqueta que indica el objeto que representan. Para reducir la subjetividad en su definición, se suele pedir a varias personas que definan una etiqueta para la misma observación y así obtener más robustez en su definición. La clasificación de observaciones que contienen más de una etiqueta al mismo tiempo, se le denomina multi-label classification."
+  },
+  {
+    "concepto": "Learning",
+    "traduccion": "Aprendizaje",
+    "tipo": "v",
+    "simple": "Es el proceso de actualizar los parámetros entrenables de un modelo matemático o estadístico con el fin de optimizar una función objetivo (Ref. Loss Function) y de esa manera resolver una tarea determinada (e.g., clasificación, regresión, clustering).",
+    "detalle": "En el caso de las redes neuronales, los parámetros entrenables son los pesos entre las neuronas y el aprendizaje se da a través de un proceso iterativo que actualiza los pesos con el objetivo de minimizar una métrica de error o loss function."
+  },
+  {
+    "concepto": "Learning Rate",
+    "traduccion": "Velocidad de Aprendizaje",
+    "tipo": "n",
+    "simple": "Es un híper-parámetro (ref. Hyper-Parameter) que representa el ratio con el cual se modifican los pesos de una red neuronal.",
+    "detalle": "Mientras un learning rate actualiza rápidamente los pesos, puede no converger en un máximo local adecuado. Por otro lado, un valor muy bajo puede hacer que el entrenamiento converja lentamente, pero también dejar de explorar otras regiones del espacio de solución que podrían minimizar la función de costo (ref. Loss Function). Se le representa con la letra  y usualmente se define como una función del tiempo con la idea de disminuir su valor mientras el entrenamiento se desarrolla."
+  },
+  {
+    "concepto": "Linear Kernel",
+    "traduccion": "Kernel Lineal",
+    "tipo": "n",
+    "simple": "Un kernel lineal es la simple suma de la multiplicación de cada una de las entradas de dos vectores de igual tamaño. El termino matemático para esto se le llama producto punto y también se le define como el coseno del ángulo de dos vectores multiplicado por el producto de sus longitudes.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Long Short-Term Memory (LSTM)",
+    "traduccion": "Long Short-Term Memory (LSTM)",
+    "tipo": "n",
+    "simple": "Es un tipo de red neuronal recurrente (ref. Recurrent Neural Network) que resuelve explícitamente el problema del desvanecimiento de gradientes (vanishing gradients) mediante el uso de compuertas entrenables que controlan el flujo de gradientes dentro de una unidad de procesamiento.",
+    "detalle": "Esto se realiza mediante un conjunto de operaciones sobre la memoria interna de cada unidad. Por ejemplo, LSTM puede aprender a escribir, leer, y sobrescribir patrones en la memoria utilizando compuertas llamadas input (entrada), output (salida), and forget (olvido), respectivamente. A diferencia de otros modelos como RNN y HMM, que también representan dependencias temporales, LSTM no suele ser sensible a la presencia de intervalos entre patrones dentro de largas señales de entrada, de ahí el termino long-term (largo-plazo)."
+  },
+  {
+    "concepto": "Loss Function",
+    "traduccion": "Función de Costo",
+    "tipo": "n",
+    "simple": "Es un valor numérico que representa el costo o error asociado a una predicción. En redes neuronales, una observación genera una distribución de clases en la capa de salida, este valor representa la diferencia entre tal distribución y la clase asignada a esta observación. Un método común para medir esta discrepancia es el denominado error cuadrado:",
+    "detalle": ""
+  },
+  {
+    "concepto": "Machine Learning",
+    "traduccion": "Aprendizaje Automático",
+    "tipo": "n",
+    "simple": "Es la predicción del futuro con datos, evidencia, y patrones del pasado usando una computadora.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Mapping",
+    "traduccion": "Mapping",
+    "tipo": "n",
+    "simple": "Transformación matemática que consiste en llevar los datos a una espacio en donde ciertas propiedades se cumplen. Por ejemplo, que cada dimensión sea ortogonal o que la separación entre clases sea más larga.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Memory",
+    "traduccion": "Memoria",
+    "tipo": "n",
+    "simple": "Conjunto de pesos de una red neuronal que se activan de forma similar en presencia de la misma observación.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Multi-Layer Perceptron (MLP)",
+    "traduccion": "Red Neuronal Multi-capa",
+    "tipo": "n",
+    "simple": "Es un tipo de red neuronal que esta organizada en una capa de entrada, una o mas capas escondidas, y una capa de salida.",
+    "detalle": "Las capas de esta red neuronal se conectadan a través de sinapsis, cada una asociada a un valor numérico llamado peso que representa su intensidad.  Un MLP se utiliza principalmente como un clasificador con el fin de aprender un espacio matemático donde la representación de los datos de entrada es fácilmente separable en clases. Debido a su capacidad de aproximar funciones muy complejas, se les denomina aproximadores universal de funciones (universal function approximators) Cada capa de un MLP es un conjunto de neuronas que propagan la señal hacia la siguiente capa, creando nuevas representaciones, y finalmente proyectándolas a la capa de salida, la cual tiene un numero de neuronas igual al numero de clases a aprender. El valor óptimo de los pesos de una de un MLP se realiza ajustando los pesos mediante la técnica llamada back propagation (ref. Back Propagation)."
+  },
+  {
+    "concepto": "Neural Networks",
+    "traduccion": "Redes Neuronales",
+    "tipo": "n",
+    "simple": "Un modelo matemático cuya arquitectura contiene varias capas de neuronas las cuales construyen progresivamente representaciones más abstractas de información directamente desde los datos de entrada.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Objective function",
+    "traduccion": "Funcióon Objetivo",
+    "tipo": "n",
+    "simple": "Ref. Loss Function.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Occam’s Razor",
+    "traduccion": "Redes Neuronales",
+    "tipo": "n",
+    "simple": "Es una heurística utilizada en ciencia que aconseja la elección de modelos más simples sobre modelos complejos o con mayor capacidad (ref. Capacity). ",
+    "detalle": "La lógica de esta heurística es que si la optimización de modelos de aprendizaje suele ser no-convexa, entonces siempre existirán modelos más complejos, y menos interpretables, que provean resultados similares. Ante la existencia de alternativas más complejas, se elige los modelos más simples debido a que sus desempeños son más fáciles de evaluar o consumen una menor cantidad de recursos."
+  },
+  {
+    "concepto": "Optimization",
+    "traduccion": "Optimización",
+    "tipo": "n",
+    "simple": "Es la elección del mejor conjunto de parámetros entrenables de un modelo con el fin de maximizar su función objetivo (ref. Objective Function).",
+    "detalle": ""
+  },
+  {
+    "concepto": "Parameters",
+    "traduccion": "Parámetros",
+    "tipo": "n",
+    "simple": "Valores que influyen en el comportamiento y desempeño de un modelo entrenable. Por ejemplo, los parámetros de una red neuronal son sus pesos.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Perceptron",
+    "traduccion": "Perceptron",
+    "tipo": "v",
+    "simple": "un clasificador que aprende a categorizar entre dos clases (0 y 1) multiplicando un peso por cada dimensión de los datos de entrada y le suma a esta operación una constante llamada bias que mueve la decisión lejos del origen. ",
+    "detalle": "Si los datos de entrada son x, los pesos del pesos del perceptron son w y el termino bias es b, el perceptron retornar si w x + b > 0 y 0 en caso contrario."
+  },
+  {
+    "concepto": "Precision",
+    "traduccion": "Precisión",
+    "tipo": "n",
+    "simple": "Aunque se suele utilizar comúnmente como sinónimo de exactitud, su definición es diferente en el contexto del método científico. La precisión es el grado de similaridad entre las predicciones correctas otorgadas por un modelo de aprendizaje automático. Si estas predicciones muestran variabilidad entre ellas, el modelo no será preciso.",
+    "detalle": "Se le suele definir como el número de predicciones correctas (True Positive) dividido por el número total de predicciones (True Positive y False Positive). Un modelo puedo ser preciso, mas no exacto y también ser poco preciso y exacto simultáneamente."
+  },
+  {
+    "concepto": "Policy",
+    "traduccion": "Policy",
+    "tipo": "n",
+    "simple": "Es una función que define el comportamiento de un agente que interactúa a través de acciones con un ambiente determinado.",
+    "detalle": "El policy (ajs) describe la probabilidad de tomar la acción a cuando el agente se encuentra en el estado s."
+  },
+  {
+    "concepto": "Recurrence",
+    "traduccion": "Recurrencia",
+    "tipo": "n",
+    "simple": "Ref. Recurrence",
+    "detalle": ""
+  },
+  {
+    "concepto": "Recurrent Neural Network (RNN)",
+    "traduccion": "Red Neuronal Recurrente",
+    "tipo": "n",
+    "simple": "Es un tipo de red neuronal profunda (ref. Deep Neural Network) que presenta sinapsis y pesos entre cada unidad interna de procesamiento (memoria), cada cual alimentada por un dato de entrada dentro de una secuencia. Esta propiedad las hace adecuadas para modelar datos temporales como la voz humana, música, documentos de texto, y videos.",
+    "detalle": "Las RNNs reciben el nombre de recurrentes por su capacidad de definir su memoria en términos de estados de memoria anteriores. Es decir, la salida de cada unidad ct+1 es una función de la entrada actual xt y el valor actual de su memoria ct, ct+1 = f(ct; xt) La forma mas común de entrenar una red neuronal recurrente es usando gradientes con la técnica llamada Back Propagation Through Time (BPTT), la cual es similar a la técnica llamada Back Propagation (ref. Back Propagation) usada para entrenar modelos de aprendizaje profundo. La principal diferencia es que BPTT desenvuelve la estructura temporal de la RNN en una secuencia donde todas las unidades comparten los mismos parámetros y memoria. Luego, se calcula la señal de error (error signal) después de proyectar la salida de la ultima unidad \"a manera de predicción\" y compararla con la correspondiente etiqueta de los datos de entrada. Este es el inicio del proceso de retro propagación y va en el sentido opuesto a la secuencia, actualizando los pesos de toda la red neuronal en ese orden. Entrenar este tipo de modelos puede presentar complicaciones cuando se memorizan patrones en señales de larga duración. La multiplicaci ón de gradientes en una secuencia larga hace que el producto final converja rápidamente a 0 si las gradientes son menores a 1, o se incremente rápidamente si la gradientes son mayores a 1. Ambos problemas reciben el nombre de desvanecimiento (vanishing) o explosión (exploding), respectivamente; y su estudio ha conducido a diseñar redes recurrentes que controlan el flujo de gradientes en base a compuertas entrenables llamadas redes LSTM (ref. Long Short Term Memory)."
+  },
+  {
+    "concepto": "Reinforcement Learning",
+    "traduccion": "Aprendizaje por Refuerzo",
+    "tipo": "n",
+    "simple": "Conjunto de algoritmos que entrenan a un agente a interactuar con un ambiente a través de una secuencia de estados , acciones, y premios (rewards). El agente es entrenado con el objetivo de maximizar el valor acumulado de futuros rewards durante la secuencia de acciones que suceden durante un episodio.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Stochastic",
+    "traduccion": "Estocástico",
+    "tipo": "n",
+    "simple": "Es la cualidad de un evento de ser determinado aleatoriamente.",
+    "detalle": "Cuando un proceso es estocástico, se dice que es un proceso aleatorio (random process) en el cual los valores de sus variables están especificados por una función de distribución probabilística. Por ejemplo, el proceso de tirar un dado esta definido por una función que asigna una probabilidad a cada resultado del experimento. Después de un gran número de intentos, dicha distribución mostrará la misma probabilidad para cada valor del dado (1 / 6)."
+  },
+  {
+    "concepto": "Supervised Learning",
+    "traduccion": "Aprendizaje Supervisado",
+    "tipo": "n",
+    "simple": "Es un problema del aprendizaje automático que consiste en aprender una función que transforme los datos de entrada (nuestra observación del fenómeno) hacia una etiqueta, la cual representa la clase a la que pertenece dicha observación y que ha sido anotada manualmente.",
+    "detalle": "Los parámetros entrenables  de dicha función f(x; ) = y son ajustados en un proceso llamado entrenamiento (ref. Training), el cual calcula la correspondencia matemática entre los elementos de entrada x y las etiquetas y. Estadísticamente, en algoritmos como las Redes Neuronales, esta relación toma la forma de la probabilidad condicional de las etiquetas dado los valores de entrada y parámetros entrenados, P(yjx; ) también llamado likelihood; mientras que en el caso de las Redes Bayesianas, dicha relación se aproxima mediante la probabilidad conjunta entre estos elementos P(x; y; ). La predicción de nuevos elementos de entrada x0 es simplemente la ejecución de la función f(x0; ), ya con sus parámetros entrenados . El resultado es una distribución sobre el conjunto de etiquetas, cuyo valor máximo representa la predicción de que clase le corresponde a x0. Este proceso de inferencia en base a evidencias tiene similitud al proceso de generalización que sucede en el cerebro humano (ref. Generalization)."
+  },
+  {
+    "concepto": "Training",
+    "traduccion": "Entrenamiento",
+    "tipo": "n",
+    "simple": "Actualización iterativa de los parámetros entrenables de un modelo de aprendizaje automático en la dirección en la cual la función de error se minimiza.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Trainable Parameters",
+    "traduccion": "Parámetros Entrenables",
+    "tipo": "n",
+    "simple": "Conjunto de parámetros que pueden cambiar durante un proceso de entrenamiento con el fin de optimizar una función de costo (ref. Loss Function)",
+    "detalle": ""
+  },
+  {
+    "concepto": "Unsupervised Learning",
+    "traduccion": "Aprendizaje No Supervisado",
+    "tipo": "n",
+    "simple": "Es un tipo de aprendizaje que no requiere el etiquetado de observaciones y que funciona en base a identificar la presencia de relaciones entre grupos de observaciones. Tales relaciones pueden incluir las medidas de similaridad, densidad, asociación, o jerarquía entre las observaciones.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Variance",
+    "traduccion": "Varianza",
+    "tipo": "n",
+    "simple": "Un algoritmo de aprendizaje supervisado tiene un alto variance cuando predice distintos resultados para diferentes datasets de entrenamiento.",
+    "detalle": ""
+  },
+  {
+    "concepto": "Weights",
+    "traduccion": "Pesos",
+    "tipo": "n",
+    "simple": "En una red neuronal artificial, un peso corresponde al valor de la sinapsis entre dos neuronales y representa el nivel de activación de la neurona en presencia de sus datos de entrada. Los pesos son usualmente los valores entrenables de una red neuronal.",
+    "detalle": ""
   }
 ]
