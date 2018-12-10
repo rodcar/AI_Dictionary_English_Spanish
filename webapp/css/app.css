@@ -3,17 +3,27 @@
 html,
 body {
 	font-size: 1.1em;
-	--space : 20px;
+	--space: 25px;
 	font-family: 'Noto Serif TC', serif;
+	padding: 0;
+	margin: 0;
+}
+
+#buscador {
+	height: 32px;
+	padding: 10px;
+	font-family: 'Noto Serif TC', serif;
+	font-size: 1.1em;
+	width: 96%;
 }
 
 h1,
 h2 {
-	padding: 0px 15px;
+	padding: 0px var(--space);
 }
 
 #prefacio {
-	margin: 15px;
+	margin: var(--space);
 }
 
 #conceptos {
@@ -43,5 +53,5 @@ footer {
 }
 
 footer p {
-	margin: 0 15px;
+	margin: 0 var(--space);
 }

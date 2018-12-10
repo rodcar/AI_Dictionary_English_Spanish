@@ -3,6 +3,8 @@ const DICCIONARIO_URL = 'diccionario.json';
 window.onload = () => {
 	
 	let conceptosView = document.getElementById('conceptos');
+	let terminosDataList = document.getElementById('terminos');
+	let buscadorView = document.getElementById('buscador');
 
 	async function cargarConceptos() {
 		let respuesta = await fetch(DICCIONARIO_URL);
@@ -12,6 +14,7 @@ window.onload = () => {
 		let conceptosUl = document.createElement('UL');
 		conceptos.forEach(concepto => {
 			mostrarConcepto(concepto);
+			agregarConceptoBusqueda(concepto);
 		});
 		conceptosView.appendChild(conceptosUl);
 	}
@@ -53,6 +56,21 @@ window.onload = () => {
 
 		conceptosView.appendChild(liConcepto);
 	}
+
+	function agregarConceptoBusqueda(concepto) {
+		let conceptoOption = document.createElement('OPTION');
+		conceptoOption.value = concepto.concepto;
+		let conceptoNode = document.createTextNode(concepto.concepto);
+		conceptoOption.appendChild(conceptoNode);
+
+		terminosDataList.appendChild(conceptoOption);
+	}
+
+	buscadorView.onchange = () => {
+		let termino = buscadorView.value;
+		window.location.hash = `#${termino}`;
+		console.log(termino);
+	};
 
 	cargarConceptos();
 };
