@@ -78,6 +78,10 @@ window.onload = () => {
 		let termino = buscadorView.value;
 		focusConcepto(termino);
 		console.log(termino);
+		gtag('event', 'select', {
+			'event_category' : 'búsqueda',
+			'event_label': termino
+		});
 	};
 
 	function focusConcepto(termino) {
