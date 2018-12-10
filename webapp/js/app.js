@@ -76,9 +76,18 @@ window.onload = () => {
 
 	buscadorView.onchange = () => {
 		let termino = buscadorView.value;
-		window.location.hash = `#${termino}`;
+		focusConcepto(termino);
 		console.log(termino);
 	};
+
+	function focusConcepto(termino) {
+		window.location.hash = `#${termino}`;
+		// ajusta el scroll en la búsqueda
+		// Para Safari
+		document.body.scrollTop = document.body.scrollTop - 70;
+		// Para Chrome, Firefox, IE and Opera
+		document.documentElement.scrollTop = document.documentElement.scrollTop - 70;
+	}
 
 	cargarConceptos();
 };

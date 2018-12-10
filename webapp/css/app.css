@@ -15,12 +15,19 @@ body {
 	padding: 10px;
 	font-family: 'Noto Serif TC', serif;
 	font-size: 1.1em;
-	width: 93%;
+	position: fixed;
+	width: 100%;
+	margin: 0;
+	top: 0;
 }
 
 h1,
-h2 {
+h2 {	
 	padding: 0px var(--space);
+}
+
+#titulo {
+	margin-top: 65px;
 }
 
 #prefacio {
