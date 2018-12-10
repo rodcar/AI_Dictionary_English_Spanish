@@ -93,5 +93,19 @@ window.onload = () => {
 		document.documentElement.scrollTop = document.documentElement.scrollTop - 70;
 	}
 
+	function revisarWebApp() {
+		const urlParams = new URLSearchParams(window.location.search);
+		const myParam = urlParams.get('utm_source');
+		console.log(myParam);
+
+		if (myParam === "homescreen") {
+			gtag('event', 'homescreen', {
+				'event_category' : 'view'
+			});
+		}
+	}
+
+
 	cargarConceptos();
+	revisarWebApp();
 };
