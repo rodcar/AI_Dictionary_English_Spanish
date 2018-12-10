@@ -1,0 +1,23 @@
+[
+  {
+    "concepto": "Accuracy",
+    "traduccion": "Exactitud",
+    "tipo": "n",
+    "simple": "Es una métrica del rendimiento de un clasificador y se representa como el número de clasificaciones correctas (True Positives y True Negatives) dividido por el numero total de elementos en el dataset de training, testing, o validación (True Positives, True Negatives, False Positives, False Negatives).",
+    "detalle": ""
+  },
+  {
+    "concepto": "Activation function",
+    "traduccion": "Funcion de Activación",
+    "tipo": "n",
+    "simple": "Es una transformacion matemática que sucede a la salida de una neurona artificial. Esta operación sucede después de haber calculado la combinacion lineal de los datos de entrada con los respectivos pesos de la neurona.",
+    "detalle": "La funcion de activación esta inspirada en la influencia del campo eléctrico extracelular sobre un conjunto de neuronas biológicas. Ejemplos populares de funciones de activación incluyen: Sigmoid, Tangente hiperbólica (Tanh), Rectified linear unit (ReLU), y Exponential Linear Unit (ELU)."
+  },
+  {
+    "concepto": "Algorithm",
+    "traduccion": "Algoritmo",
+    "tipo": "n",
+    "simple": "Es una secuencia de operaciones que resuelven una conjunto de problemas y que involucran el procesamiento de datos, el calculo de operaciones matemáticas, o la predicción de resultados basados en evidencia.",
+    "detalle": "Un algoritmo puede ser definido en un lenguaje de programacion y expresado como una función con datos de entrada y de salida."
+  }
+]
