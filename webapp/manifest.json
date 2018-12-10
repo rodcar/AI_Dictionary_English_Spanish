@@ -1,0 +1,25 @@
+{
+  "short_name": "Diccionario de Inteligencia Artificial",
+  "name": "Diccionario de Inteligencia Artificial",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "img/icon-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "img/icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "display": "standalone",
+  "start_url": "index.html?utm_source=homescreen"
+}
